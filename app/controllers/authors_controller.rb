@@ -22,19 +22,19 @@ class AuthorsController < ApplicationController
     author = Author.find params[:id]
     author.update author_params
 
-    redirect_to author
+    redirect_to author_path
   end
 
   def destroy
     author = Author.find params[:id]
     author.destory
 
-    redirect_to author
+    redirect_to author_path
   end
 
   def create
     author = Author.create author_params
-    redirect_to author
+    redirect_to author_path
   end
 
   private
